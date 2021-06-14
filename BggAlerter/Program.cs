@@ -23,14 +23,15 @@ namespace BggAlerter
             var bggCaller = new BggCaller();
             var bggResponseParser = new BggResponseParser();
             var filePath = @"C:\Users\afig3\Documents\test.csv";
+            //var bggGameReader = new BggFileReader();
+            //var oldGameList = bggGameReader.ReadBggGames(filePath);
+            //Console.WriteLine(oldGameList);
             // TODO: check database for existing entries, load to memory if any
-
             var httpResponse = await bggCaller.GetBggResponse();
             var gameList = bggResponseParser.ParseBggResponse(httpResponse);
 
             var bggFileWriter = new BggFileWriter();
             bggFileWriter.WriteGameData(gameList, filePath);
-            // TODO: save game list to the database > call BggFileWriter meth
 
             Console.WriteLine("Done.");
             Console.ReadKey();
