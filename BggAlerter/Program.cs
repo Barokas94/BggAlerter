@@ -29,7 +29,6 @@ namespace BggAlerter
             // TODO: check database for existing entries, load to memory if any
             var httpResponse = await bggCaller.GetBggResponse();
             var gameList = bggResponseParser.ParseBggResponse(httpResponse);
-
             var bggFileWriter = new BggFileWriter();
             bggFileWriter.WriteGameData(gameList, filePath);
 
