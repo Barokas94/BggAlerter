@@ -11,25 +11,31 @@ namespace BggAlerter
 {
     class Program
     {
+        private const int AmountOfGames = 30;
+        private const string FilePath = @"C:\Users\afig3\Documents\test.csv";
+
         static void Main(string[] args)
         {
             Console.WriteLine("Starting application...");
 
             RunApplication().Wait();
         }
+
         private static async Task RunApplication()
         {
             // Register components
             var bggCaller = new BggCaller();
             var bggResponseParser = new BggResponseParser();
-            var filePath = @"C:\Users\afig3\Documents\test.csv";
             var bggGameReader = new BggFileReader();
-            var oldGameList = bggGameReader.ReadBggGames(filePath);
+            var oldGameList = bggGameReader.ReadBggGames(FilePath);
+
             // TODO: check database for existing entries, load to memory if any
             var httpResponse = await bggCaller.GetBggResponse();
-            var gameList = bggResponseParser.ParseBggResponse(httpResponse);
+            var gameList = bggResponseParser.ParseBggResponse(httpResponse).Take(AmountOfGames).ToList();
+
             var bggFileWriter = new BggFileWriter();
-            bggFileWriter.WriteGameData(gameList, filePath);
+            bggFileWriter.WriteGameData(gameList, FilePath);
+
             Console.WriteLine("Done.");
             Console.ReadKey();
             // TODO: read how many top games to check (potato version: simply define it in some class instead of proper config)
