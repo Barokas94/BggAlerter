@@ -22,12 +22,15 @@ namespace BggAlerter
             // Register components
             var bggCaller = new BggCaller();
             var bggResponseParser = new BggResponseParser();
-            var filePath = @"C:\Users\afig3\Documents\test.csv";
+            var filePath = @"C:\Users\Rokis\Documents\GameList.txt";
             var bggGameReader = new BggFileReader();
             var oldGameList = bggGameReader.ReadBggGames(filePath);
             // TODO: check database for existing entries, load to memory if any
             var httpResponse = await bggCaller.GetBggResponse();
             var gameList = bggResponseParser.ParseBggResponse(httpResponse);
+            var comparer = new BggComparer();
+            var changeOfOrder = comparer.CompareLists(oldGameList, gameList);
+            OutputWriter.WriteChanges(changeOfOrder);
             var bggFileWriter = new BggFileWriter();
             bggFileWriter.WriteGameData(gameList, filePath);
             Console.WriteLine("Done.");

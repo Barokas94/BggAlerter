@@ -12,7 +12,11 @@ namespace BggAlerter
             if (!File.Exists(filePath))
             {
                 Console.WriteLine($"File {filePath} does not exist");
-                throw new ArgumentException();
+                Console.WriteLine($"Creating file {filePath}...");
+
+                File.Create(filePath);
+                Console.WriteLine($"File created. {filePath}...");
+
             }
             var csvLines = File.ReadAllLines(filePath).ToList();
             var oldgameList = new List<Game>();
