@@ -22,21 +22,19 @@ namespace BggAlerter
             // Register components
             var bggCaller = new BggCaller();
             var bggResponseParser = new BggResponseParser();
-            var filePath = @"C:\Users\Rokis\Documents\GameList.txt";
+            string directoryPath = @".\Data";
+            string filePath = @$"{directoryPath}\GameList.txt";
             var bggGameReader = new BggFileReader();
-            var oldGameList = bggGameReader.ReadBggGames(filePath);
-            // TODO: check database for existing entries, load to memory if any
+            var oldGameList = bggGameReader.ReadBggGames(filePath, directoryPath);
             var httpResponse = await bggCaller.GetBggResponse();
             var gameList = bggResponseParser.ParseBggResponse(httpResponse);
             var comparer = new BggComparer();
             var changeOfOrder = comparer.CompareLists(oldGameList, gameList);
             OutputWriter.WriteChanges(changeOfOrder);
             var bggFileWriter = new BggFileWriter();
-            bggFileWriter.WriteGameData(gameList, filePath);
+            //bggFileWriter.WriteGameData(gameList, filePath);
             Console.WriteLine("Done.");
             Console.ReadKey();
-            // TODO: read how many top games to check (potato version: simply define it in some class instead of proper config)
-            // TODO: if database previously contained entries, run the check and throw an alert upon changes for top X games
         }
     }
 }

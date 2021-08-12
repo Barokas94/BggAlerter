@@ -14,7 +14,7 @@ namespace BggAlerter
                 {
                     if (oldGame.Name == newGame.Name)
                     {
-                        if (oldGame.Rating == newGame.Rating)
+                        if (oldGame.Position == newGame.Position)
                         {
                             break;
                         }
