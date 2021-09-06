@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.IO;
-using CsvHelper;
-using System.Globalization;
-using System.Text;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace BggAlerter
 {
@@ -32,7 +26,7 @@ namespace BggAlerter
             var changeOfOrder = comparer.CompareLists(oldGameList, gameList);
             OutputWriter.WriteChanges(changeOfOrder);
             var bggFileWriter = new BggFileWriter();
-            //bggFileWriter.WriteGameData(gameList, filePath);
+            bggFileWriter.WriteGameData(gameList, filePath);
             Console.WriteLine("Done.");
             Console.ReadKey();
         }
