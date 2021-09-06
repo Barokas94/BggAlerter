@@ -1,0 +1,100 @@
+1,Gloomhaven,2017,8.532
+2,Pandemic Legacy: Season 1,2015,8.452
+3,Brass: Birmingham,2018,8.408
+4,Terraforming Mars,2016,8.279
+5,Gloomhaven: Jaws of the Lion,2020,8.261
+6,Twilight Imperium: Fourth Edition,2017,8.257
+7,Gaia Project,2017,8.177
+8,Star Wars: Rebellion,2016,8.173
+9,Through the Ages: A New Story of Civilization,2015,8.164
+10,Great Western Trail,2016,8.129
+11,War of the Ring: Second Edition,2012,8.126
+12,Spirit Island,2017,8.125
+13,Twilight Struggle,2005,8.123
+14,Scythe,2016,8.073
+15,The Castles of Burgundy,2011,8.01
+16,7 Wonders Duel,2015,7.983
+17,Terra Mystica,2012,7.978
+18,Concordia,2013,7.965
+19,Brass: Lancashire,2007,7.963
+20,Nemesis,2018,7.95
+21,Wingspan,2019,7.947
+22,A Feast for Odin,2016,7.936
+23,Arkham Horror: The Card Game,2016,7.928
+24,Viticulture Essential Edition,2015,7.903
+25,Orléans,2014,7.888
+26,Root,2018,7.884
+27,Mage Knight Board Game,2011,7.88
+28,Everdell,2018,7.864
+29,Puerto Rico,2002,7.849
+30,Caverna: The Cave Farmers,2013,7.835
+31,Food Chain Magnate,2015,7.833
+32,Dune: Imperium,2020,7.829
+33,Blood Rage,2015,7.82
+34,Agricola,2007,7.819
+35,Mansions of Madness: Second Edition,2016,7.804
+36,Pandemic Legacy: Season 2,2017,7.798
+37,Maracaibo,2019,7.797
+38,Marvel Champions: The Card Game,2019,7.788
+39,Clank! Legacy: Acquisitions Incorporated,2019,7.774
+40,The Crew: The Quest for Planet Nine,2019,7.768
+41,Too Many Bones,2017,7.768
+42,The 7th Continent,2017,7.768
+43,Underwater Cities,2018,7.757
+44,Kingdom Death: Monster,2015,7.751
+45,Tzolk'in: The Mayan Calendar,2012,7.747
+46,Anachrony,2017,7.746
+47,Power Grid,2004,7.745
+48,Barrage,2019,7.737
+49,Mechs vs. Minions,2016,7.731
+50,Clans of Caledonia,2017,7.727
+51,Star Wars: Imperial Assault,2014,7.726
+52,Lost Ruins of Arnak,2020,7.722
+53,Le Havre,2008,7.714
+54,On Mars,2020,7.697
+55,Azul,2017,7.695
+56,Eclipse,2011,7.692
+57,Pax Pamir: Second Edition,2019,7.689
+58,Through the Ages: A Story of Civilization,2006,7.687
+59,The Gallerist,2015,7.686
+60,Eclipse: Second Dawn for the Galaxy,2020,7.675
+61,Android: Netrunner,2012,7.672
+62,Aeon's End,2016,7.67
+63,Lisboa,2017,7.668
+64,The Quacks of Quedlinburg,2018,7.662
+65,Crokinole,1876,7.66
+66,Robinson Crusoe: Adventures on the Cursed Island,2012,7.659
+67,Race for the Galaxy,2007,7.655
+68,Fields of Arle,2014,7.654
+69,The Voyages of Marco Polo,2015,7.653
+70,Paladins of the West Kingdom,2019,7.651
+71,Teotihuacan: City of Gods,2018,7.647
+72,Clank!: A Deck-Building Adventure,2016,7.645
+73,7 Wonders,2010,7.64
+74,Five Tribes,2014,7.63
+75,Dominant Species,2010,7.627
+76,Lords of Waterdeep,2012,7.621
+77,Agricola (Revised Edition),2016,7.617
+78,Keyflower,2012,7.602
+79,Tainted Grail: The Fall of Avalon,2019,7.594
+80,Grand Austria Hotel,2015,7.588
+81,Architects of the West Kingdom,2018,7.588
+82,Caylus,2005,7.585
+83,El Grande,1995,7.579
+84,Twilight Imperium: Third Edition,2005,7.569
+85,Battlestar Galactica: The Board Game,2008,7.569
+86,Eldritch Horror,2013,7.561
+87,Troyes,2010,7.561
+88,Dominion: Intrigue,2009,7.56
+89,Mombasa,2015,7.56
+90,Rising Sun,2018,7.557
+91,The Lord of the Rings: Journeys in Middle-Earth,2019,7.555
+92,Patchwork,2014,7.541
+93,Raiders of the North Sea,2015,7.541
+94,Russian Railroads,2013,7.534
+95,Tigris & Euphrates,1997,7.528
+96,The Isle of Cats,2019,7.527
+97,Lorenzo il Magnifico,2016,7.526
+98,Codenames,2015,7.516
+99,Trajan,2011,7.515
+100,Roll for the Galaxy,2014,7.515

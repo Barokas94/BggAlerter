@@ -7,15 +7,17 @@ namespace BggAlerter
     {
         public static void WriteChanges(List<GameOrder> changeOfOrder)
         {
-            foreach (var gameOrder in changeOfOrder)
-            {
-                Console.WriteLine($"Game {gameOrder.Game.Name} position has changed from {gameOrder.OldPosition} " +
-                    $"to {gameOrder.NewPosition}");
-            }
-
             if (changeOfOrder.Count == 0)
             {
                 Console.WriteLine("No changes detected.");
+            }
+            else
+            {
+                foreach (var gameOrder in changeOfOrder)
+                {
+                    Console.WriteLine($"Game {gameOrder.Game.Name} position has changed from {gameOrder.OldPosition} " +
+                        $"to {gameOrder.NewPosition}");
+                }
             }
         }
     }
