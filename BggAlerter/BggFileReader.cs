@@ -7,13 +7,22 @@ namespace BggAlerter
 {
     class BggFileReader
     {
-        public List<Game> ReadBggGames(string filePath)
+        public List<Game> ReadBggGames(string filePath, string directoryPath)
         {
-            if (!File.Exists(filePath))
+            Directory.CreateDirectory(directoryPath);
+
+            if (File.Exists(filePath))
             {
-                Console.WriteLine($"File {filePath} does not exist");
-                throw new ArgumentException();
+                Console.WriteLine("File exists. Calculation of asteroid trajectory commencing...");
             }
+            else
+            {
+                Console.WriteLine($"File {filePath} does not exist.");
+                Console.WriteLine($"Creating file {filePath}...");
+                File.Create(filePath);
+                Console.WriteLine($"File created. {filePath}...");
+            }
+
             var csvLines = File.ReadAllLines(filePath).ToList();
             var oldgameList = new List<Game>();
 
@@ -23,7 +32,13 @@ namespace BggAlerter
                 var position = Convert.ToInt32(rowData[0]);
                 var name = rowData[1];
                 var year = Convert.ToInt32(rowData[2]);
-                var rating = Convert.ToDouble(rowData[3]);
+
+                if (!double.TryParse(rowData[3], out var rating))
+                {
+                    var convertedDoubleString = rowData[3].Replace('.', ',');
+                    rating = Convert.ToDouble(convertedDoubleString);
+                }
+
                 var game = new Game(position, name, year, rating);
 
                 oldgameList.Add(game);

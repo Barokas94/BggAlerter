@@ -19,5 +19,25 @@
             Year = year;
             Rating = rating;
         }
+
+        public static bool operator ==(Game game1, Game game2)
+        {
+            if (game1.Position == game2.Position)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool operator !=(Game game1, Game game2)
+        {
+            if (game1.Position != game2.Position)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
